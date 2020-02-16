@@ -18,7 +18,7 @@ ul {
     border-bottom: 1px solid #000;
 }
 
-.tasks,
+#task-section,
 .btn,
 input[type="text"] {
     border: 1px solid #000;
@@ -41,7 +41,7 @@ input[type="text"] {
     padding: 0 1rem;
 } 
 
-.tasks {
+#task-section {
     width: 85%;
     margin: 0 auto;
     margin-bottom: 2rem;
