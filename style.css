@@ -18,6 +18,11 @@ ul {
     border-bottom: 1px solid #000;
 }
 
+li {
+    display: flex;
+    justify-content: space-between;
+}
+
 #task-section,
 .btn,
 input[type="text"] {

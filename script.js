@@ -16,10 +16,13 @@ const addNote = (e) => {
     // Create elements for each task
     tasks.forEach(task => {
         const li = document.createElement('li');
+        const span = document.createElement('span');
         const text = document.createTextNode(task);
+        const x = document.createTextNode('x');
 
         // Append elements
-        li.appendChild(text);
+        span.appendChild(x);
+        li.append(text, span);
         ul.appendChild(li);
     })
 
