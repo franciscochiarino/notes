@@ -59,3 +59,17 @@ input[type="text"] {
     padding: 0.5rem 1rem;
     box-shadow: 2px 2px;
 }
+
+span {
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+    background-color: #000;
+    color: #fff;
+    width: 18px;
+    height: 18px;
+}
+
+p {
+    max-width: 230px;
+}
