@@ -1,31 +1,52 @@
 // Variables
 const form = document.querySelector('form');
+let ul = document.querySelector('ul');
 let tasks = [];
 
-// Function
+// Add Note
 const addNote = (e) => {
     e.preventDefault();
-
-    // Get ul
-    let ul = document.querySelector('ul');
+    ul.innerHTML = '';
 
     // Push string to taks array
     input = document.querySelector('input[type="text"]');
     tasks.push(input.value);
+    input.value = '';
 
     // Create elements for each task
     tasks.forEach(task => {
-        const li = document.createElement('li');
-        const span = document.createElement('span');
-        const text = document.createTextNode(task);
-        const x = document.createTextNode('x');
 
+        // List
+        const li = document.createElement('li');
+
+        // Span 
+        const spanX = document.createElement('span');
+        const x = document.createTextNode('x');
+        spanX.appendChild(x);
+
+        // Text
+        const textP = document.createElement('p');
+        const text = document.createTextNode(task);
+        textP.appendChild(text);
+        
         // Append elements
-        span.appendChild(x);
-        li.append(text, span);
+        li.append(textP, spanX);
         ul.appendChild(li);
     })
 
 }
 
+// Remove Note
+const removeNote = event => {
+    let clickedText = event.target.parentElement.firstChild.innerHTML;
+
+    if (event.target.tagName === 'SPAN') {
+        let index = tasks.indexOf(clickedText);
+        tasks.splice(index, 1);
+        event.target.parentElement.remove()
+        
+    }
+}
+
 form.addEventListener('submit', addNote);
+ul.addEventListener('click', removeNote)
