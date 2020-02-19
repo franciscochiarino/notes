@@ -44,6 +44,7 @@ form {
 input[type="text"] {
     margin-right: 0.5rem;
     padding: 0 1rem;
+    width: 200px;
 } 
 
 #task-section {
@@ -68,6 +69,7 @@ span {
     color: #fff;
     width: 18px;
     height: 18px;
+    border-radius: 5px;
 }
 
 p {
